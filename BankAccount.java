@@ -20,7 +20,8 @@ private boolean isActive;
  transactionHistory.add("Withdrawal: -" + amount);
  }
  public void deposit(double amount) {
- balance += (amount);
- transactionHistory.add("Deposit: +" + amount);
+ double interest = amount * 0.01;
+ balance += (amount + interest);
+ transactionHistory.add("Deposit: +" + amount + interest);
  }
 } 
