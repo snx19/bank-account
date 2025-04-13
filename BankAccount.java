@@ -12,11 +12,15 @@ private boolean isActive;
  this.isActive = true;
  }
  public void withdraw(double amount) {
+ if (balance <= 0) {
+     System.out.println("Cannot withdraw, insufficient funds")
+     return;
+ }
  balance -= amount;
  transactionHistory.add("Withdrawal: -" + amount);
  }
  public void deposit(double amount) {
- balance += amount;
+ balance += (amount);
  transactionHistory.add("Deposit: +" + amount);
  }
 } 
